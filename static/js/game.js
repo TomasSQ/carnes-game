@@ -153,7 +153,102 @@
 					]
 				}
 			]
-		}
+		}, 5 : {
+			name : 'Qual é o corte?',
+			description : 'Nunca (ou quase) mais será enganado no açougue se acertar todos!',
+			questions : [{
+					name : '',
+					img : 'picanha.jpg',
+					answers : [
+						'Maminha',
+						{text : 'Picanha'},
+						'Coxão duro',
+						'Miolo de alcatra'
+					]
+				}, {
+					name : '',
+					img : 'maminha.png',
+					answers : [
+						'Picanha',
+						{text : 'Maminha'},
+						'Coxão duro',
+						'Miolo de alcatra'
+					]
+				},{
+					name : '',
+					img : 'coxaoDuro.png',
+					answers : [
+						'Picanha',
+						{text : 'Coxão duro'},
+						'Maminha',
+						'Miolo de alcatra'
+					]
+				},{
+					name : '',
+					img : 'mioloalcatra.png',
+					answers : [
+						'Picanha',
+						{text : 'Miolo de alcatra'},
+						'Maminha',
+						'Coxão duro'
+					]
+				},{
+					name : '',
+					img : 'contraFile.png',
+					answers : [
+						'Picanha',
+						{text : 'Contra filé'},
+						'Filé mignon',
+						'Coxão duro'
+					]
+				},{
+					name : '',
+					img : 'coxaoMole.png',
+					answers : [
+						'Músculo',
+						{text : 'Coxão mole'},
+						'Patinho',
+						'Coxão duro'
+					]
+				},{
+					name : '',
+					img : 'filemignon.JPG',
+					answers : [
+						'Contra filé',
+						{text : 'Filé mignon'},
+						'Músculo',
+						'Largato'
+					]
+				},{
+					name : '',
+					img : 'musculo.png',
+					answers : [
+						'Lagarto',
+						{text : 'Músculo'},
+						'Patinho',
+						'Coxão mole'
+					]
+				},{
+					name : '',
+					img : 'lagarto.png',
+					answers : [
+						'Picanha',
+						{text : 'Lagarto'},
+						'Músculo',
+						'Filé mignon'
+					]
+				},{
+					name : '',
+					img : 'patinho.png',
+					answers : [
+						'Picanha',
+						{text : 'Patinho'},
+						'Músculo',
+						'Coxão mole'
+					]
+				}
+			]
+		},
 	},
 		rightAnswers = 0;
 
