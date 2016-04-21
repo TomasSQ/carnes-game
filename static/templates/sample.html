@@ -3,7 +3,10 @@
 {% block content %}
 	<div class="game">
 		<div class="row games-list">
-			{% for id, name, description in [(1, 'Jogo 1', 'Descrição jogo 1'), (2, 'Jogo 2', 'Descrição jogo 2')] %}
+			{% for id, name, description in [
+				(1, 'Regiões do boi', 'Aprenda as regiões do boi'),
+				(2, 'Tecido conjuntivo', 'Manja dos colageno?')
+			] %}
 				<div class="col s12 l3" data-game-id="{{ id }}">
 					<div class="card red darken-4">
 						<div class="card-content white-text">
@@ -23,7 +26,7 @@
 				</div>
 			</nav>
 			<div class="row">
-				<div class="col s12 l6">
+				<div class="col s12">
 					<h5 class="description">Game description</h5>
 					<div class="questions"></div>
 				</div>

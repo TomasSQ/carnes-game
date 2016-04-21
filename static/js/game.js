@@ -2,48 +2,105 @@
 
 	'use strict';
 
+	var shuffle = function (array) {
+		return array.sort(function () {
+			return 0.5 - Math.random();
+		});
+	};
+
 	var games = {
 		1 : {
-			name : 'Jogo 1',
-			description : 'Descrição jogo 1',
+			name : 'Regiões do boi',
+			description : 'Aprenda as regiões do boi marcando suas partes corretamente!',
 			questions : [{
-					name : 'Pergunta 1',
-					answers : ['Resposta 1', 'Resposta 2', 'Resposta 3', 'Resposta 4'],
-					rightAnswer : 1
+					name : 'As regiões 1, 2 e 3 são, respectivamente:',
+					img : 'regioesBoiQ.png',
+					answers : [
+						{text : 'Peito, região distal do músculo toráxico, região distal do músculo pélvico'},
+						'Peito, região proximal do músculo toráxico, região proximal do músculo pélvico',
+						'Região proximal do músculo toráxico, costado e flaco, região pélvica'
+					]
 				}, {
-					name : 'Pergunta 2',
-					answers : ['Resposta 1', 'Resposta 2', 'Resposta 3', 'Resposta 4'],
-					rightAnswer : 2
+					name : 'As regiões 5 e 6 são, respectivamente:',
+					img : 'regioesBoiQ.png',
+					answers : [
+						'Região cervical, região dorso-lombar',
+						{text : 'Região pélvica, região dorso-lombar'},
+						'Região proximal do músculo pélvico, região pélvica'
+					]
+				}, {
+					name : 'As regiões 4 e 8 são, respectivamente:',
+					img : 'regioesBoiQ.png',
+					answers : [
+						'Região distal do músculo pélvico, peito',
+						'Região pélvica, região cervical',
+						{text : 'Região proximal do músculo pélvico, região proximal do músculo toráxico'},
+					]
+				}, {
+					name : 'As regiões 7 e 9 são, respectivamente:',
+					img : 'regioesBoiQ.png',
+					answers : [
+						'Peito, região dorso-lombar',
+						{text: 'Região cervical, costado e flanco'},
+						'Região proximal do músculo toráxico, costado e flanco'
+					]
 				}
 			],
-			rightAnswers : [2, 3]
+			rightAnswers : [0, 1, 2]
+		}, 2 : {
+			name : 'Tecido conjuntivo',
+			description : 'Manja dos colageno? Bora manjar mais então',
+			questions : [{
+					name : 'O que é o 1?',
+					img : 'colagenoQ.png',
+					answers : [
+						'Eliseu',
+						{text : 'Epmísio'},
+						'Perimísio',
+						'Endomísio'
+					]
+				}, {
+					name : 'O que é o 2?',
+					img : 'colagenoQ.png',
+					answers : [
+						'Paraíso',
+						{text : 'Perimísio'},
+						'Epmísio',
+						'Endomísio'
+					]
+				},{
+					name : 'O que é o 3?',
+					img : 'colagenoQ.png',
+					answers : [
+						'Endosperma',
+						{text : 'Endomísio'},
+						'Perimísio',
+						'Epmísio'
+					]
+				}
+			]
 		}
 	},
 		rightAnswers = 0;
 
-	var getQuestionsLinks = function (questions) {
-		var questionsLinks = [];
+	var getQuestionsHTML = function (questionsOriginal) {
+		var questionsHTML = [],
+			questions = shuffle(questionsOriginal);
 
 		for (var i = 0; i < questions.length; i++) {
-			questionsLinks.push('<li class="chip margin-right">' + (i + 1) + '</li>');
-		}
-
-		//return questionsLinks.join('');
-	};
-
-	var getQuestionsHTML = function (questions) {
-		var questionsHTML = [];
-
-		for (var i = 0; i < questions.length; i++) {
-			var question =
+			var img = !questions[i].img ? '' : '<img src="imgs/' + questions[i].img + '" class="col s12 l4"></img><div class="clearfix"></div>',
+				question =
 				'<ul class="collection with-header question" data-question-id="1">' +
-					'<li class="collection-header"><h4>' + questions[i].name + '</h4></li>';
+					'<li class="collection-header">' + img + '<h4>' + questions[i].name + '</h4></li>';
 
-			for (var j = 0; j < questions[i].answers.length; j++) {
-				question += '<li class="answer collection-item' + (questions[i].rightAnswer == j ? ' ra' : '') + '">' +
-								'<div>' + questions[i].answers[j] +
-									'<a href="#!" class="secondary-content"><i class="material-icons">send</i></a>' +
-								'</div>' +
+			var answers = shuffle(questions[i].answers);
+			for (var j = 0; j < answers.length; j++) {
+				var answer = answers[j],
+					isRight = $.isPlainObject(answer),
+					text = isRight ? answer.text : answer;
+
+				question += '<li class="answer collection-item' + (isRight ? ' ra' : '') + '">' +
+								'<div>' + text + '</div>' +
 							'</li>';
 			}
 
@@ -86,7 +143,6 @@
 		this.find('.game-start')
 			.find('.name').text(game.name).end()
 			.find('.description').text(game.description).end()
-			.find('.go-to-question').html(getQuestionsLinks(game.questions)).end()
 			.find('.questions').html(getQuestionsHTML(game.questions))
 				.find('.question:not(:first-child)').hide().end()
 				.find('.answer').click(function () {
