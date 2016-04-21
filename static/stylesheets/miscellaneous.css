@@ -1,0 +1,21 @@
+.inline-block {display: inline-block !important;}
+
+.main-title,
+.font-2,
+.font-big {font-size: 2em !important;}
+.font-4,
+.font-extra-big {font-size: 4em !important;}
+
+.bold {font-weight: bold !important;}
+
+.margin {margin: 1em !important;}
+.margin-left {margin-left: 1em !important;}
+.margin-right {margin-right: 1em !important;}
+.margin-top {margin-top: 1em !important;}
+.margin-bottom {margin-bottom: 1em !important;}
+
+.padding {padding: 1em !important;}
+.padding-left {padding-left: 1em !important;}
+.padding-right {padding-right: 1em !important;}
+.padding-top {padding-top: 1em !important;}
+.padding-bottom {padding-bottom: 1em !important;}
