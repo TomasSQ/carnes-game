@@ -208,7 +208,7 @@
 						endGame();
 					});
 			}
-		}, 1000);
+		}, 1000 + 1000 * correct);
 	};
 
 	var startGame = function (game) {
