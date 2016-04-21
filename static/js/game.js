@@ -106,9 +106,13 @@
 	$.fn.config = function () {
 		var container = this;
 
-		container.find('.games-list [data-game-id]').click(function () {
-			startGame.apply(container, [games[$(this).data('game-id')]]);
-		});
+		container
+			.find('.games-list [data-game-id]').click(function () {
+				startGame.apply(container, [games[$(this).data('game-id')]]);
+			}).end()
+			.find('.get-back').click(function () {
+				endGame();
+			});
 
 		return container;
 	};
