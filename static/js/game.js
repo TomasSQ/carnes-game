@@ -79,6 +79,80 @@
 					]
 				}
 			]
+		}, 3 : {
+			name : 'Lorem ipsum dolor',
+			description : 'Dado um nome em latim, marque sua tradução para o português',
+			questions : [{
+					name : 'Psoas major',
+					answers : [
+						'Contra-filé',
+						{text : 'Filé mignon'},
+						'Coxão duro',
+						'Peito'
+					]
+				},{
+					name : 'Longissimus dossi',
+					answers : [
+						'Filé mignon',
+						{text : 'Contra-filé'},
+						'Coxão duro',
+						'Peito'
+					]
+				}, {
+					name : 'Pectoralis profunaus',
+					answers : [
+						'Contra-filé',
+						{text : 'Peito'},
+						'Filé mignon',
+						'Coxão duro'
+					]
+				}, {
+					name : 'Biceps femoris',
+					answers : [
+						'Contra-filé',
+						{text : 'Coxão duro'},
+						'Filé mignon',
+						'Peito'
+					]
+				}
+			]
+		}, 4 : {
+			name : 'Como fala em latim?',
+			description : 'Dado um nome em português, marque sua tradução para o latim',
+			questions : [{
+					name : 'Contra-filé',
+					answers : [
+						'Psoas major',
+						{text : 'Longissimus dossi'},
+						'Pectoralis profunaus',
+						'Biceps femoris'
+					]
+				},{
+					name : 'Filé mignon',
+					answers : [
+						'Longissimus dossi',
+						{text : 'Psoas major'},
+						'Pectoralis profunaus',
+						'Biceps femoris'
+					]
+				},{
+					name : 'Peito',
+					answers : [
+						'Longissimus dossi',
+						{text : 'Pectoralis profunaus'},
+						'Psoas major',
+						'Biceps femoris'
+					]
+				},{
+					name : 'Coxão duro',
+					answers : [
+						'Longissimus dossi',
+						{text : 'Biceps femoris'},
+						'Psoas major',
+						'Pectoralis profunaus'
+					]
+				}
+			]
 		}
 	},
 		rightAnswers = 0;
