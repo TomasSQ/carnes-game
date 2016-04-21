@@ -248,7 +248,107 @@
 					]
 				}
 			]
-		},
+		}, 6 : {
+			name : 'Proteínas do músculo bovino',
+			description : 'Consegue adivinhar cada parte da composição do músculo?',
+			questions : [{
+					name : 'O que é o 1?',
+					img : 'miofibrilaresQ.png',
+					answers : [
+						'Fibra muscular',
+						{text : 'Músculo'},
+						'Miofibrila'
+					]
+				}, {
+					name : 'O que é o 2?',
+					img : 'miofibrilaresQ.png',
+					answers : [
+						'Músculo',
+						{text : 'Fibra muscular'},
+						'Miofibrila'
+					]
+				}, {
+					name : 'O que é o 3?',
+					img : 'miofibrilaresQ.png',
+					answers : [
+						'Sarcomero',
+						{text : 'Sarcolema'},
+						'Sarcoplasma'
+					]
+				}, {
+					name : 'O que é o 4?',
+					img : 'miofibrilaresQ.png',
+					answers : [
+						'Sarcomero',
+						{text : 'Sarcoplasma'},
+						'Sarcolema'
+					]
+				}, {
+					name : 'O que é o 5?',
+					img : 'miofibrilaresQ.png',
+					answers : [
+						'Sarcoplasma',
+						{text : 'Sarcomero'},
+						'Sarcolema'
+					]
+				}, {
+					name : 'O que é o 6?',
+					img : 'miofibrilaresQ.png',
+					answers : [
+						'Músculo',
+						{text : 'Miofibrila'},
+						'Fibra muscular'
+					]
+				}
+			]
+		}, 7 : {
+			name : 'Sarcômero',
+			description : 'Vamos entender mais sobre o sarcômero',
+			questions : [{
+					name : 'O que é o 4?',
+					img : 'sarcomeroQ.png',
+					answers : [
+						'Actina',
+						{text : 'Miosina'},
+						'Troponina',
+						'Tropomiosina'
+					]
+				}, {
+					name : 'O que é o 5?',
+					img : 'sarcomeroQ.png',
+					answers : [
+						'Miosina',
+						{text : 'Actina'},
+						'Troponina',
+						'Tropomiosina'
+					]
+				}, {
+					name : 'O que é o 1?',
+					img : 'sarcomeroQ.png',
+					answers : [
+						'Banda A',
+						{text : 'Banda I'},
+						'Linha Z'
+					]
+				}, {
+					name : 'O que é o 2?',
+					img : 'sarcomeroQ.png',
+					answers : [
+						'Banda I',
+						{text : 'Banda A'},
+						'Linha Z'
+					]
+				}, {
+					name : 'O que é o 3?',
+					img : 'sarcomeroQ.png',
+					answers : [
+						'Banda I',
+						{text : 'Linha Z'},
+						'Banda A'
+					]
+				}
+			]
+		}
 	},
 		rightAnswers = 0;
 
